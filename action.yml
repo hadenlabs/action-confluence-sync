@@ -31,7 +31,7 @@ runs:
           --rm \
           --workdir /usr/src/ \
           -v $GITHUB_WORKSPACE/:/usr/src/ \
-          kovetskiy/mark:latest mark -u ${{ inputs.confluence_user }} \
+          kovetskiy/mark:8.0 mark -u ${{ inputs.confluence_user }} \
           -p {{ inputs.confluence_token }} -b {{ inputs.confluence_base_url }} \
           -f $file;
           echo;
