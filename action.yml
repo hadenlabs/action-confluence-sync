@@ -24,12 +24,15 @@ runs:
         image: kovetskiy/mark:latest
         options: -v ${{ github.workspace }}:/github/workspace --workdir /github/workspace
         run: |
+          echo "username=${{ inputs.confluence_user }}" >> ./config.toml
+          echo "password=${{ inputs.confluence_token }}" >> ./config.toml
+          echo "base_url=${{ inputs.confluence_base_url }}" >> ./config.toml
           for file in ${{ inputs.files }}; do
             if ! grep -F "<!-- Space:" $file; then
                 continue
             fi
             echo "> Sync $file";
-            mark -u ${{ inputs.confluence_user }} -p ${{ inputs.confluence_token }} -b ${{ inputs.confluence_base_url }} -f ${file};
+            mark --config ./config.toml -f ${file};
             echo;
           done
 
