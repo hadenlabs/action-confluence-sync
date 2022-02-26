@@ -24,6 +24,11 @@ on:
       # prerelease tags, more or less
       - 'v[0-9]+.[0-9]+.[0-9]+-*'
 
+env:
+  CONFLUENCE_BASE_URL: '${{ secrets.CONFLUENCE_BASE_URL }}'
+  CONFLUENCE_USER: '${{ secrets.CONFLUENCE_USER }}'
+  CONFLUENCE_ACCESS_TOKEN: '${{ secrets.CONFLUENCE_ACCESS_TOKEN }}'
+
 jobs:
   confluence:
     runs-on: ubuntu-20.04
@@ -46,7 +51,7 @@ jobs:
       - name: Sync confluence
         uses: ./
         with:
-          confluence_base_url: '${{ secrets.CONFLUENCE_BASE_URL }}'
-          confluence_user: '${{ secrets.CONFLUENCE_USER }}'
-          confluence_token: '${{ secrets.CONFLUENCE_ACCESS_TOKEN }}'
+          confluence_base_url: ${{ env.CONFLUENCE_BASE_URL }}
+          confluence_user: ${{ env.CONFLUENCE_USER }}
+          confluence_token: ${{ env.CONFLUENCE_ACCESS_TOKEN }}
           files: '${{ steps.changed-files.outputs.all_changed_files }}'
