@@ -52,7 +52,7 @@ jobs:
         uses: ./
         env:
           CONFLUENCE_BASE_URL: ${{ env.CONFLUENCE_BASE_URL }}
-          CONFLUENCE_USER: ${{ env.CONFLUENCE_USER }}
+          CONFLUENCE_USER: 'luis@hadenlabs.com'
           confluence_token: ${{ env.CONFLUENCE_ACCESS_TOKEN }}
         with:
           files: '${{ steps.changed-files.outputs.all_changed_files }}'
