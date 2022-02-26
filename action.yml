@@ -1,0 +1,21 @@
+name: 'TODO: write action name'
+description: 'TODO: write description'
+author: 'hadenlabs'
+inputs:
+  args:
+    description: options to pass to image docker
+    required: false
+    default: 'command args'
+
+runs:
+  using: 'composite'
+  steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - name: run docker
+      shell: bash
+      run: |
+        docker run --rm --workdir /github/workspace -v "$GITHUB_WORKSPACE":"/github/workspace" hadenlabs/action-docker-template:0.0.0 ${{ inputs.args }}
+
+branding:
+  icon: 'check-circle'
+  color: 'green'

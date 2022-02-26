@@ -1,0 +1,68 @@
+---
+#
+# This is the canonical configuration for the `README.md`
+# Run `make readme` to rebuild the `README.md`
+#
+
+# Name of this project
+name: action-docker-template
+
+email:
+  support: support@hadenlabs.com
+
+confluence:
+  space: Projects
+  title: ActionDockerTemplate
+
+# Logo for this project
+#logo: docs/logo.png
+
+# License of this project
+license: 'LGPL-3.0'
+
+# Canonical GitHub repo
+github_repo: hadenlabs/action-docker-template
+
+# Badges to display
+badges:
+  - name: Latest Release
+    image: https://img.shields.io/github/release/hadenlabs/action-docker-template
+    url: https://github.com/hadenlabs/action-docker-template/releases
+  - name: Lint
+    image: https://img.shields.io/github/workflow/status/hadenlabs/action-docker-template/lint-code
+    url: https://github.com/hadenlabs/action-docker-template/actions
+  - name: Issues
+    image: https://img.shields.io/github/issues/hadenlabs/action-docker-template
+    url: https://github.com/hadenlabs/action-docker-template/issues
+  - name: pre-commit
+    image: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
+    url: https://github.com/pre-commit/pre-commit
+  - name: Conventional Commits
+    image: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow
+    url: https://conventionalcommits.org
+  - name: KeepAChangelog
+    image: https://img.shields.io/badge/changelog-Keep%20a%20Changelog%20v1.0.0-orange
+    url: https://keepachangelog.com
+
+requirements: |-
+
+  This is a list of plugins that need to be installed previously to enjoy all the goodies of this configuration:
+
+  - [gomplate](https://github.com/hairyhenderson/gomplate)
+  - [Docker](https://www.docker.com)
+  - [python](https://www.python.org)
+  - [taskfile](https://github.com/go-task/task)
+
+# Short description of this project
+description: |-
+
+  action-docker-template for project
+
+  ### TODO: Replace name project to New Project
+
+  ```bash
+    agr 'action-docker-template' 'new-project'
+  ```
+
+usages:
+  - docs/usage.md
