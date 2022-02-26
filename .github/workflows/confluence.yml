@@ -3,7 +3,7 @@ name: confluence
 on:
   workflow_run:
     workflows:
-      - sonar-scan
+      - lint-code
     types:
       - completed
 
@@ -19,26 +19,24 @@ on:
       # prerelease tags, more or less
       - 'v[0-9]+.[0-9]+.[0-9]+-*'
 
-env:
-  CONFLUENCE_BASE_URL: '${{ secrets.CONFLUENCE_BASE_URL }}'
-  CONFLUENCE_ACCESS_TOKEN: '${{ secrets.CONFLUENCE_ACCESS_TOKEN }}'
-  CONFLUENCE_USER: '${{ secrets.CONFLUENCE_USER }}'
-
 jobs:
   confluence:
     runs-on: ubuntu-20.04
     steps:
       - name: Check out a copy of the repo
+        if: ${{ !env.ACT }}
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
 
-      - name: Install Task
-        if: ${{ !env.ACT }}
-        uses: arduino/setup-task@v1
-
-      - name: Check dependences
-        run: task confluence:check
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v17.1
 
       - name: Sync confluence
-        run: task confluence:sync:all
+        uses: ./
+        with:
+          confluence_base_url: '${{ secrets.CONFLUENCE_BASE_URL }}'
+          confluence_user: '${{ secrets.CONFLUENCE_USER }}'
+          confluence_token: '${{ secrets.CONFLUENCE_ACCESS_TOKEN }}'
+          files: '${{ steps.changed-files.outputs.all_changed_files }}'

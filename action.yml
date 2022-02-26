@@ -1,20 +1,50 @@
-name: 'TODO: write action name'
-description: 'TODO: write description'
+name: hadenlabs-action-confluence-sync'
+description: 'sync files markdown using mark'
 author: 'hadenlabs'
 inputs:
-  args:
-    description: options to pass to image docker
-    required: false
-    default: 'command args'
+  confluence_base_url:
+    description: base url of confluence
+    required: true
+  confluence_user:
+    description: confluence user
+    required: true
+  confluence_token:
+    description: token of user
+    required: true
+  files:
+    description: files to sync
+    required: true
 
 runs:
   using: 'composite'
   steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - name: run docker
+    - name: Filtered files markdown
       shell: bash
       run: |
-        docker run --rm --workdir /github/workspace -v "$GITHUB_WORKSPACE":"/github/workspace" hadenlabs/action-confluence-sync:0.0.0 ${{ inputs.args }}
+        set -euo pipefail
+        echo  ${{ inputs.files }}
+        for file in ${{ inputs.files }}; do
+          echo "$file was changed"
+        done
+    # - name: sync files to confluence
+    #   shell: bash
+    #   env:
+    #     # INPUT_<VARIABLE_NAME> is not available in Composite run steps
+    #     # https://github.community/t/input-variable-name-is-not-available-in-composite-run-steps/127611
+    #     FILTERED_FILES: ${{ steps.changed-files.outputs.all_changed_files }} | grep -v '.tpl.md' | xargs grep '<!-- Space'| cut -d : -f 1 | sed -r 's/.\/\///g' | sort -u | xargs
+    #   run: |
+    #       for file in ${FILTERED_FILES}; do
+    #         echo "> Sync $file";
+    #         docker run \
+    #         --platform linux/amd64 \
+    #         --rm \
+    #         --workdir /usr/src/ \
+    #         -v $GITHUB_WORKSPACE/:/usr/src/ \
+    #         kovetskiy/mark:latest mark -u ${{ inputs.confluence_user }} \
+    #         -p {{ inputs.confluence_token }} -b {{ inputs.confluence_base_url }} \
+    #         -f $file;
+    #         echo;
+    #       done
 
 branding:
   icon: 'check-circle'
