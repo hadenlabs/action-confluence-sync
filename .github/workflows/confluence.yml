@@ -7,6 +7,11 @@ on:
     types:
       - completed
 
+  pull_request:
+    branches:
+      - develop
+      - main
+
   push:
     branches:
       - develop
