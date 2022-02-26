@@ -19,6 +19,10 @@ runs:
   using: 'composite'
   steps:
     - name: sync files to confluence
+      env:
+         CONFLUENCE_USER: ${{ inputs.confluence_user }}
+         CONFLUENCE_TOKEN: ${{ inputs.confluence_token }}
+         CONFLUENCE_BASE_URL: ${{ inputs.confluence_base_url }}
       shell: bash
       run: |
         for file in ${{ inputs.files }}; do
@@ -26,14 +30,13 @@ runs:
               continue
           fi
           echo "> Sync $file";
-          echo "> user ${{ inputs.confluence_user }}";
           docker run \
           --rm \
           --platform linux/amd64 \
           --workdir /github/workspace \
           -v "$GITHUB_WORKSPACE":"/github/workspace" \
-          kovetskiy/mark:8.0 mark -u ${{ inputs.confluence_user }} \
-          -p ${{ inputs.confluence_token }} -b ${{ inputs.confluence_base_url }} \
+          kovetskiy/mark:8.0 mark -u "$CONFLUENCE_USER" \
+          -p "$CONFLUENCE_TOKEN" -b "$CONFLUENCE_BASE_URL \
           -f ${file};
           echo;
         done
