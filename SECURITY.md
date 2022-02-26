@@ -1,3 +1,12 @@
+<!-- Space: Projects -->
+<!-- Parent: ActionConfluenceSync -->
+<!-- Title: Security ActionConfluenceSync -->
+
+<!-- Label: ActionConfluenceSync -->
+<!-- Label: Security -->
+<!-- Include: disclaimer.md -->
+<!-- Include: ac:toc -->
+
 # Security Policy
 
 ## Reporting a Security Bug
