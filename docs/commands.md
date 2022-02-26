@@ -1,8 +1,8 @@
 <!-- Space: Projects -->
-<!-- Parent: ActionDockerTemplate -->
-<!-- Title: Commands ActionDockerTemplate -->
+<!-- Parent: ActionConfluenceSync -->
+<!-- Title: Commands ActionConfluenceSync -->
 
-<!-- Label: ActionDockerTemplate -->
+<!-- Label: ActionConfluenceSync -->
 <!-- Label: Project -->
 <!-- Label: Commands -->
 <!-- Include: disclaimer.md -->

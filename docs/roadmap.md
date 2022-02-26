@@ -1,6 +1,6 @@
 <!-- Space: Projects -->
-<!-- Parent: ActionDockerTemplate -->
-<!-- Title: Roadmap ActionDockerTemplate -->
+<!-- Parent: ActionConfluenceSync -->
+<!-- Title: Roadmap ActionConfluenceSync -->
 
 <!-- Label: Roadmap -->
 <!-- Include: disclaimer.md -->
@@ -30,7 +30,7 @@
 
 The Roadmap is a list of all the things we're working on for the year.
 
-You can see the corresponding projects on [action-docker-template](https://github.com/hadenlabs/action-docker-template)
+You can see the corresponding projects on [action-confluence-sync](https://github.com/hadenlabs/action-confluence-sync)
 
 ## Legend
 

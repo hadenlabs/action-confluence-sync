@@ -1,6 +1,6 @@
 <!-- Space: Projects -->
-<!-- Parent: ActionDockerTemplate -->
-<!-- Title: Examples ActionDockerTemplate -->
+<!-- Parent: ActionConfluenceSync -->
+<!-- Title: Examples ActionConfluenceSync -->
 
 <!-- Label: Examples -->
 <!-- Include: ./../disclaimer.md -->

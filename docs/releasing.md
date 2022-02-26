@@ -1,8 +1,8 @@
 <!-- Space: Projects -->
-<!-- Parent: ActionDockerTemplate -->
-<!-- Title: Releasing ActionDockerTemplate -->
+<!-- Parent: ActionConfluenceSync -->
+<!-- Title: Releasing ActionConfluenceSync -->
 
-<!-- Label: ActionDockerTemplate -->
+<!-- Label: ActionConfluenceSync -->
 <!-- Label: Project -->
 <!-- Label: Releasing -->
 <!-- Include: disclaimer.md -->
@@ -12,7 +12,7 @@
 
 ## Bump a new version
 
-Make a new version of action-docker-template in the following steps:
+Make a new version of action-confluence-sync in the following steps:
 
 ### Generate version major
 

@@ -1,8 +1,8 @@
 <!-- Space: Projects -->
-<!-- Parent: ActionDockerTemplate -->
-<!-- Title: Env Vars ActionDockerTemplate -->
+<!-- Parent: ActionConfluenceSync -->
+<!-- Title: Env Vars ActionConfluenceSync -->
 
-<!-- Label: ActionDockerTemplate -->
+<!-- Label: ActionConfluenceSync -->
 <!-- Label: Project -->
 <!-- Label: Env Vars -->
 <!-- Include: disclaimer.md -->

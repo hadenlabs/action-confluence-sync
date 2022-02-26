@@ -1,7 +1,7 @@
 {
-  "name": "@hadenlabs/action-docker-template",
+  "name": "@hadenlabs/action-confluence-sync",
   "version": "0.0.0",
-  "description": "action-docker-template",
+  "description": "action-confluence-sync",
   "author": "Luis Mayta <slovacus@gmail.com>",
   "license": "LGPL-3.0",
   "engines": {
@@ -37,7 +37,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hadenlabs/action-docker-template.git"
+    "url": "git+https://github.com/hadenlabs/action-confluence-sync.git"
   },
   "keywords": [
     "hadenlabs",
@@ -47,9 +47,9 @@
     "tool"
   ],
   "bugs": {
-    "url": "https://github.com/hadenlabs/action-docker-template/issues"
+    "url": "https://github.com/hadenlabs/action-confluence-sync/issues"
   },
-  "homepage": "https://github.com/hadenlabs/action-docker-template#readme",
+  "homepage": "https://github.com/hadenlabs/action-confluence-sync#readme",
   "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^12.1.2",

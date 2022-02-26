@@ -1,4 +1,4 @@
-site_name: action-docker-template Documentation
+site_name: action-confluence-sync Documentation
 theme: 'material'
 markdown_extensions:
   - toc:
@@ -15,8 +15,8 @@ extra:
   font:
     text: 'Source Sans Pro'
 
-repo_name: 'hadenlabs/action-docker-template'
-repo_url: 'https://github.com/hadenlabs/action-docker-template'
+repo_name: 'hadenlabs/action-confluence-sync'
+repo_url: 'https://github.com/hadenlabs/action-confluence-sync'
 copyright: 'Copyright © 2021 <a href="https://hadenlabs.com">hadenlabs</a>'
 
 google_analytics:

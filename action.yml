@@ -14,7 +14,7 @@ runs:
     - name: run docker
       shell: bash
       run: |
-        docker run --rm --workdir /github/workspace -v "$GITHUB_WORKSPACE":"/github/workspace" hadenlabs/action-docker-template:0.0.0 ${{ inputs.args }}
+        docker run --rm --workdir /github/workspace -v "$GITHUB_WORKSPACE":"/github/workspace" hadenlabs/action-confluence-sync:0.0.0 ${{ inputs.args }}
 
 branding:
   icon: 'check-circle'

@@ -1,4 +1,4 @@
-module github.com/hadenlabs/action-docker-template
+module github.com/hadenlabs/action-confluence-sync
 
 go 1.16
 

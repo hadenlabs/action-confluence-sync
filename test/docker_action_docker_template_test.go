@@ -8,7 +8,7 @@ import (
 )
 
 func TestPreCommitHooksBuildSuccess(t *testing.T) {
-	tag := "hadenlabs/action-docker-template:latest"
+	tag := "hadenlabs/action-confluence-sync:latest"
 	otherOptions := []string{}
 
 	buildOptions := &docker.BuildOptions{
