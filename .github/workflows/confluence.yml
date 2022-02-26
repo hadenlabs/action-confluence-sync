@@ -50,8 +50,9 @@ jobs:
 
       - name: Sync confluence
         uses: ./
-        with:
-          confluence_base_url: ${{ env.CONFLUENCE_BASE_URL }}
-          confluence_user: ${{ env.CONFLUENCE_USER }}
+        env:
+          CONFLUENCE_BASE_URL: ${{ env.CONFLUENCE_BASE_URL }}
+          CONFLUENCE_USER: ${{ env.CONFLUENCE_USER }}
           confluence_token: ${{ env.CONFLUENCE_ACCESS_TOKEN }}
+        with:
           files: '${{ steps.changed-files.outputs.all_changed_files }}'
