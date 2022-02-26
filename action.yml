@@ -36,7 +36,7 @@ runs:
           --workdir /github/workspace \
           -v "$GITHUB_WORKSPACE":"/github/workspace" \
           kovetskiy/mark:8.0 mark -u "$CONFLUENCE_USER" \
-          -p "$CONFLUENCE_TOKEN" -b "$CONFLUENCE_BASE_URL \
+          -p "$CONFLUENCE_TOKEN" -b "$CONFLUENCE_BASE_URL" \
           -f ${file};
           echo;
         done
