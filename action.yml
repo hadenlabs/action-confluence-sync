@@ -18,33 +18,24 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - name: Filtered files markdown
+    - name: sync files to confluence
       shell: bash
       run: |
-        set -euo pipefail
-        echo  ${{ inputs.files }}
         for file in ${{ inputs.files }}; do
-          echo "$file was changed"
+          if ! grep -F "<!-- Space:" $file; then
+              continue
+          fi
+          echo "> Sync $file";
+          docker run \
+          --platform linux/amd64 \
+          --rm \
+          --workdir /usr/src/ \
+          -v $GITHUB_WORKSPACE/:/usr/src/ \
+          kovetskiy/mark:latest mark -u ${{ inputs.confluence_user }} \
+          -p {{ inputs.confluence_token }} -b {{ inputs.confluence_base_url }} \
+          -f $file;
+          echo;
         done
-    # - name: sync files to confluence
-    #   shell: bash
-    #   env:
-    #     # INPUT_<VARIABLE_NAME> is not available in Composite run steps
-    #     # https://github.community/t/input-variable-name-is-not-available-in-composite-run-steps/127611
-    #     FILTERED_FILES: ${{ steps.changed-files.outputs.all_changed_files }} | grep -v '.tpl.md' | xargs grep '<!-- Space'| cut -d : -f 1 | sed -r 's/.\/\///g' | sort -u | xargs
-    #   run: |
-    #       for file in ${FILTERED_FILES}; do
-    #         echo "> Sync $file";
-    #         docker run \
-    #         --platform linux/amd64 \
-    #         --rm \
-    #         --workdir /usr/src/ \
-    #         -v $GITHUB_WORKSPACE/:/usr/src/ \
-    #         kovetskiy/mark:latest mark -u ${{ inputs.confluence_user }} \
-    #         -p {{ inputs.confluence_token }} -b {{ inputs.confluence_base_url }} \
-    #         -f $file;
-    #         echo;
-    #       done
 
 branding:
   icon: 'check-circle'

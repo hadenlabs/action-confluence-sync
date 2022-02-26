@@ -32,6 +32,11 @@ jobs:
       - name: Get changed files
         id: changed-files
         uses: tj-actions/changed-files@v17.1
+        with:
+          files: |
+            *.md
+          files_ignore: |
+            *.tpl.md
 
       - name: Sync confluence
         uses: ./
