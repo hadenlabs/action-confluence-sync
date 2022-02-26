@@ -23,17 +23,13 @@ runs:
       with:
         image: kovetskiy/mark:latest
         options: -v ${{ github.workspace }}:/github/workspace --workdir /github/workspace
-        env:
-          CONFLUENCE_USER: ${{ inputs.confluence_user }}
-          CONFLUENCE_TOKEN: ${{ inputs.confluence_token }}
-          CONFLUENCE_BASE_URL: ${{ inputs.confluence_base_url }}
         run: |
           for file in ${{ inputs.files }}; do
             if ! grep -F "<!-- Space:" $file; then
                 continue
             fi
             echo "> Sync $file";
-            mark -u "$CONFLUENCE_USER" -p "$CONFLUENCE_TOKEN" -b "$CONFLUENCE_BASE_URL" -f ${file};
+            mark -u ${{ inputs.confluence_user }} -p ${{ inputs.confluence_token }} -b ${{ inputs.confluence_base_url }} -f ${file};
             echo;
           done
 
