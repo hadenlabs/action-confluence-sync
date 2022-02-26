@@ -5,14 +5,14 @@
 #
 
 # Name of this project
-name: action-docker-template
+name: action-confluence-sync
 
 email:
   support: support@hadenlabs.com
 
 confluence:
   space: Projects
-  title: ActionDockerTemplate
+  title: ActionConfluenceSync
 
 # Logo for this project
 #logo: docs/logo.png
@@ -21,19 +21,19 @@ confluence:
 license: 'LGPL-3.0'
 
 # Canonical GitHub repo
-github_repo: hadenlabs/action-docker-template
+github_repo: hadenlabs/action-confluence-sync
 
 # Badges to display
 badges:
   - name: Latest Release
-    image: https://img.shields.io/github/release/hadenlabs/action-docker-template
-    url: https://github.com/hadenlabs/action-docker-template/releases
+    image: https://img.shields.io/github/release/hadenlabs/action-confluence-sync
+    url: https://github.com/hadenlabs/action-confluence-sync/releases
   - name: Lint
-    image: https://img.shields.io/github/workflow/status/hadenlabs/action-docker-template/lint-code
-    url: https://github.com/hadenlabs/action-docker-template/actions
+    image: https://img.shields.io/github/workflow/status/hadenlabs/action-confluence-sync/lint-code
+    url: https://github.com/hadenlabs/action-confluence-sync/actions
   - name: Issues
-    image: https://img.shields.io/github/issues/hadenlabs/action-docker-template
-    url: https://github.com/hadenlabs/action-docker-template/issues
+    image: https://img.shields.io/github/issues/hadenlabs/action-confluence-sync
+    url: https://github.com/hadenlabs/action-confluence-sync/issues
   - name: pre-commit
     image: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
     url: https://github.com/pre-commit/pre-commit
@@ -56,13 +56,7 @@ requirements: |-
 # Short description of this project
 description: |-
 
-  action-docker-template for project
-
-  ### TODO: Replace name project to New Project
-
-  ```bash
-    agr 'action-docker-template' 'new-project'
-  ```
+  action-confluence-sync for project
 
 usages:
   - docs/usage.md

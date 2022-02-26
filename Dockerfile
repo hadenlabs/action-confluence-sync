@@ -3,7 +3,7 @@ FROM alpine:3.13
 ARG VERSION=0.0.0
 
 LABEL maintainer="Team Hadenlabs <hello@hadenlabs.com>" \
-      org.label-schema.vcs-url="https://github.com/hadenlabs/action-docker-template" \
+      org.label-schema.vcs-url="https://github.com/hadenlabs/action-confluence-sync" \
       org.label-schema.version=$VERSION \
       org.label-schema.schema-version="1.0"
 

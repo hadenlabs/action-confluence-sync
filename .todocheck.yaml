@@ -1,4 +1,4 @@
-origin: github.com/hadenlabs/action-docker-template
+origin: github.com/hadenlabs/action-confluence-sync
 issue_tracker: GITHUB
 auth:
   type: none

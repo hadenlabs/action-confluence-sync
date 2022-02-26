@@ -1,11 +1,11 @@
 {
-  "baseUrl": "https://github.com/hadenlabs/action-docker-template",
+  "baseUrl": "https://github.com/hadenlabs/action-confluence-sync",
   "ignorePatterns": [
     {
       "pattern": "^https://hadenlabs.com"
     },
     {
-      "pattern": "^https://github.com/hadenlabs/action-docker-template/compare"
+      "pattern": "^https://github.com/hadenlabs/action-confluence-sync/compare"
     }
   ],
   "replacementPatterns": [

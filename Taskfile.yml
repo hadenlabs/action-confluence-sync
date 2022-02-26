@@ -33,7 +33,7 @@ dotenv:
   - .env
 
 vars:
-  PROJECT_NAME: action-docker-template
+  PROJECT_NAME: action-confluence-sync
   ORGANIZATION: hadenlabs
   REVIEWERS: luismayta
   PYTHON_VERSION: 3.9.2

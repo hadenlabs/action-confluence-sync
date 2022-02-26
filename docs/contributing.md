@@ -1,8 +1,8 @@
 <!-- Space: Projects -->
-<!-- Parent: ActionDockerTemplate -->
-<!-- Title: Contributing ActionDockerTemplate -->
+<!-- Parent: ActionConfluenceSync -->
+<!-- Title: Contributing ActionConfluenceSync -->
 
-<!-- Label: ActionDockerTemplate -->
+<!-- Label: ActionConfluenceSync -->
 <!-- Label: Project -->
 <!-- Label: Contributing -->
 <!-- Include: disclaimer.md -->
@@ -10,11 +10,11 @@
 
 # How To Contribute
 
-Contributions to action-docker-template are welcome.
+Contributions to action-confluence-sync are welcome.
 
 Feel free to use all of the contribution options:
 
-- Contribute to action-docker-template repositories on [GitHub](https://github.com/hadenlabs/action-docker-template). See [Git flow](./contribute/git-flow.md).
+- Contribute to action-confluence-sync repositories on [GitHub](https://github.com/hadenlabs/action-confluence-sync). See [Git flow](./contribute/git-flow.md).
 
 ## Getting Started
 
@@ -75,7 +75,7 @@ See [Git flow](./contribute/git-flow.md).
 
 ### Documentation
 
-Documentation is a part of the action-docker-template code base. You can find the documentation files in the `doc/` subdirectory of the [main repository](https://github.com/hadenlabs/action-docker-template). This means that the contribution process is the same for both the source code and documentation.
+Documentation is a part of the action-confluence-sync code base. You can find the documentation files in the `doc/` subdirectory of the [main repository](https://github.com/hadenlabs/action-confluence-sync). This means that the contribution process is the same for both the source code and documentation.
 
 ### Testing
 
@@ -83,15 +83,15 @@ See [Testing](./testing.md).
 
 ### Code Submission
 
-1.  See if a [Pull Request](https://github.com/hadenlabs/action-docker-template/pulls) exists
+1.  See if a [Pull Request](https://github.com/hadenlabs/action-confluence-sync/pulls) exists
     - Add some comments or review the code to help it along
     - Don\'t be afraid to comment when logic needs clarification
-2.  Create a Fork and open a [Pull Request](https://github.com/hadenlabs/action-docker-template/pulls) if needed
+2.  Create a Fork and open a [Pull Request](https://github.com/hadenlabs/action-confluence-sync/pulls) if needed
 
 ### Code Review
 
 - Anyone can review code
-- Any [Pull Request](https://github.com/hadenlabs/action-docker-template/pulls) should be closed or merged within a week
+- Any [Pull Request](https://github.com/hadenlabs/action-confluence-sync/pulls) should be closed or merged within a week
 
 ### Code Acceptance
 

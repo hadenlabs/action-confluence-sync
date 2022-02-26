@@ -1,1 +1,1 @@
-# Welcome to action-docker-template documentation
+# Welcome to action-confluence-sync documentation
