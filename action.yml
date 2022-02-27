@@ -1,5 +1,5 @@
 name: hadenlabs-action-confluence-sync'
-description: 'sync files markdown using mark'
+description: 'Action confluence sync that can be used to publish markdown documents to confluence.'
 author: 'hadenlabs'
 inputs:
   confluence_url:

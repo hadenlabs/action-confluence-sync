@@ -56,7 +56,11 @@ requirements: |-
 # Short description of this project
 description: |-
 
-  action-confluence-sync for project
+  Action confluence sync that can be used to publish markdown documents to confluence. This action is a thin wrapper around the mark
+  See the action.yaml file for details of required inputs.
+
+include:
+  - 'docs/include/actions.md'
 
 usages:
   - docs/usage.md
