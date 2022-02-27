@@ -7,11 +7,6 @@ on:
     types:
       - completed
 
-  pull_request:
-    branches:
-      - develop
-      - main
-
   push:
     branches:
       - develop
@@ -48,5 +43,5 @@ jobs:
         with:
           files: '${{ steps.changed-files.outputs.all_changed_files }}'
           confluence_url: ${{ secrets.CONFLUENCE_BASE_URL }}
-          username: luis@hadenlabs.com
+          username: ${{ secrets.CONFLUENCE_USER }}
           confluence_token: ${{ secrets.CONFLUENCE_ACCESS_TOKEN }}
