@@ -85,11 +85,13 @@ tasks:
     desc: Generate Readme
     silent: true
     cmds:
+      - cmd: action-docs --update-readme docs/include/actions.md
       - >-
         gomplate --file {{.README_TEMPLATE}}
         --out {{.README_FILE}}
         --datasource config={{.README_YAML}}
         --datasource includes={{.README_INCLUDES}}
+      - task: prettier
 
   prettier:
     run: once
