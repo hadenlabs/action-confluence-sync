@@ -43,5 +43,5 @@ jobs:
         with:
           files: '${{ steps.changed-files.outputs.all_changed_files }}'
           confluence_url: ${{ secrets.CONFLUENCE_BASE_URL }}
-          username: ${{ secrets.CONFLUENCE_USER }}
+          confluence_username: ${{ secrets.CONFLUENCE_USER }}
           confluence_token: ${{ secrets.CONFLUENCE_ACCESS_TOKEN }}
