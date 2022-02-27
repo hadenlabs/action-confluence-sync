@@ -2,11 +2,11 @@ name: hadenlabs-action-confluence-sync'
 description: 'sync files markdown using mark'
 author: 'hadenlabs'
 inputs:
-  confluence_base_url:
+  confluence_url:
     description: base url of confluence
     required: true
-  confluence_user:
-    description: confluence user
+  username:
+    description: confluence username
     required: true
   confluence_token:
     description: token of user
@@ -18,24 +18,23 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - name: sync files to confluence
-      shell: bash
-      run: |
-        for file in ${{ inputs.files }}; do
-          if ! grep -F "<!-- Space:" $file; then
-              continue
-          fi
-          echo "> Sync $file";
-          docker run \
-          --platform linux/amd64 \
-          --rm \
-          --workdir /usr/src/ \
-          -v $GITHUB_WORKSPACE/:/usr/src/ \
-          kovetskiy/mark:latest mark -u ${{ inputs.confluence_user }} \
-          -p {{ inputs.confluence_token }} -b {{ inputs.confluence_base_url }} \
-          -f $file;
-          echo;
-        done
+    - name: Sync files to confluence.
+      uses: addnab/docker-run-action@v3
+      with:
+        image: kovetskiy/mark:latest
+        options: -v ${{ github.workspace }}:/github/workspace --workdir /github/workspace
+        run: |
+          echo "username = '${{ inputs.username }}'" >> ./config.toml
+          echo "password = '${{ inputs.confluence_token }}'" >> ./config.toml
+          echo "base_url = '${{ inputs.confluence_url }}'" >> ./config.toml
+          for file in ${{ inputs.files }}; do
+            if ! grep -F "<!-- Space:" $file; then
+                continue
+            fi
+            echo "> Sync $file";
+            mark --config ./config.toml -f ${file};
+            echo;
+          done
 
 branding:
   icon: 'check-circle'

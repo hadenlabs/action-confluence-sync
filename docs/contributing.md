@@ -3,7 +3,6 @@
 <!-- Title: Contributing ActionConfluenceSync -->
 
 <!-- Label: ActionConfluenceSync -->
-<!-- Label: Project -->
 <!-- Label: Contributing -->
 <!-- Include: disclaimer.md -->
 <!-- Include: ac:toc -->

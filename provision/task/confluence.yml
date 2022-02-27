@@ -48,7 +48,7 @@ tasks:
             --rm \
             --workdir /usr/src/ \
             -v {{.PWD}}/:/usr/src/ \
-            kovetskiy/mark:latest mark -u {{.CONFLUENCE_USER}} \
+            kovetskiy/mark:8.0 mark -u {{.CONFLUENCE_USER}} \
             -p {{.CONFLUENCE_ACCESS_TOKEN}} -b {{.CONFLUENCE_BASE_URL}} \
             -f $file;
             echo;
