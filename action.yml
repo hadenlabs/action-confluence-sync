@@ -1,7 +1,16 @@
 name: hadenlabs-action-confluence-sync'
-description: 'sync files markdown to confluence using mark'
+description: 'sync files markdown using mark'
 author: 'hadenlabs'
 inputs:
+  confluence_base_url:
+    description: base url of confluence
+    required: true
+  confluence_user:
+    description: confluence user
+    required: true
+  confluence_token:
+    description: token of user
+    required: true
   files:
     description: files to sync
     required: true
@@ -15,9 +24,9 @@ runs:
         image: kovetskiy/mark:latest
         options: -v ${{ github.workspace }}:/github/workspace --workdir /github/workspace
         run: |
-          echo "username=${CONFLUENCE_USER}" >> ./config.toml
-          echo "password=${CONFLUENCE_TOKEN}" >> ./config.toml
-          echo "base_url=${CONFLUENCE_BASE_URL}" >> ./config.toml
+          echo "username=${{ inputs.confluence_user }}" >> ./config.toml
+          echo "password=${{ inputs.confluence_token }}" >> ./config.toml
+          echo "base_url=${{ inputs.confluence_base_url }}" >> ./config.toml
           for file in ${{ inputs.files }}; do
             if ! grep -F "<!-- Space:" $file; then
                 continue
