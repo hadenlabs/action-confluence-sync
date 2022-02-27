@@ -2,7 +2,7 @@ name: hadenlabs-action-confluence-sync'
 description: 'sync files markdown using mark'
 author: 'hadenlabs'
 inputs:
-  confluence_base_url:
+  confluence_url:
     description: base url of confluence
     required: true
   confluence_user:
@@ -26,7 +26,8 @@ runs:
         run: |
           echo "username=${{ inputs.confluence_user }}" >> ./config.toml
           echo "password=${{ inputs.confluence_token }}" >> ./config.toml
-          echo "base_url=${{ inputs.confluence_base_url }}" >> ./config.toml
+          echo "base_url=${{ inputs.confluence_url }}" >> ./config.toml
+
           for file in ${{ inputs.files }}; do
             if ! grep -F "<!-- Space:" $file; then
                 continue

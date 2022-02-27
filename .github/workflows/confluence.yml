@@ -47,6 +47,6 @@ jobs:
         uses: ./
         with:
           files: '${{ steps.changed-files.outputs.all_changed_files }}'
-          confluence_base_url: ${{ secrets.CONFLUENCE_BASE_URL }}
+          confluence_url: ${{ secrets.CONFLUENCE_BASE_URL }}
           confluence_user: 'luis@hadenlabs.com'
           confluence_token: ${{ secrets.CONFLUENCE_ACCESS_TOKEN }}
