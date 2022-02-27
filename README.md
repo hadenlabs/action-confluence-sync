@@ -62,7 +62,7 @@ jobs:
             *.tpl.md
 
       - name: Sync confluence
-        uses: hadenlabs/action-confluence-sync@0.0.0
+        uses: hadenlabs/action-confluence-sync@0.1.0
         with:
           confluence_base_url: '${{ secrets.CONFLUENCE_BASE_URL }}'
           confluence_user: '${{ secrets.CONFLUENCE_USER }}'
