@@ -19,7 +19,7 @@
 
 # action-confluence-sync
 
-action-confluence-sync for project
+Action confluence sync that can be used to publish markdown documents to confluence. This action is a thin wrapper around the mark See the action.yaml file for details of required inputs.
 
 ## Requirements
 
@@ -69,6 +69,31 @@ jobs:
           confluence_token: '${{ secrets.CONFLUENCE_ACCESS_TOKEN }}'
           files: '${{ steps.changed-files.outputs.all_changed_files }}'
 ```
+
+ <!-- action-docs-inputs -->
+
+## Inputs
+
+| parameter           | description            | required | default |
+| ------------------- | ---------------------- | -------- | ------- |
+| confluence_url      | base url of confluence | `true`   |         |
+| confluence_username | confluence username    | `true`   |         |
+| confluence_token    | token of user          | `true`   |         |
+| files               | files to sync          | `true`   |         |
+
+<!-- action-docs-inputs -->
+
+<!-- action-docs-outputs -->
+
+<!-- action-docs-outputs -->
+
+<!-- action-docs-runs -->
+
+## Runs
+
+This action is an `composite` action.
+
+<!-- action-docs-runs -->
 
 ## Help
 
