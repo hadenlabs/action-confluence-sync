@@ -28,6 +28,7 @@ runs:
           echo "username = '${{ inputs.username }}'" >> ./config.toml
           echo "password = '${{ inputs.confluence_token }}'" >> ./config.toml
           echo "base_url = '${{ inputs.confluence_url }}'" >> ./config.toml
+          cat ./config.toml
 
           for file in ${{ inputs.files }}; do
             if ! grep -F "<!-- Space:" $file; then
