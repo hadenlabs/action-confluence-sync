@@ -5,8 +5,8 @@ inputs:
   confluence_url:
     description: base url of confluence
     required: true
-  confluence_user:
-    description: confluence user
+  username:
+    description: confluence username
     required: true
   confluence_token:
     description: token of user
@@ -24,7 +24,8 @@ runs:
         image: kovetskiy/mark:latest
         options: -v ${{ github.workspace }}:/github/workspace --workdir /github/workspace
         run: |
-          echo "username=${{ inputs.confluence_user }}" >> ./config.toml
+          echo ${{ inputs.username }}
+          echo "username=${{ inputs.username }}" >> ./config.toml
           echo "password=${{ inputs.confluence_token }}" >> ./config.toml
           echo "base_url=${{ inputs.confluence_url }}" >> ./config.toml
 
