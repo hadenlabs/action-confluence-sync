@@ -3,9 +3,6 @@
   "ignorePatterns": [
     {
       "pattern": "^https://hadenlabs.com"
-    },
-    {
-      "pattern": "^https://github.com/hadenlabs/action-confluence-sync/compare"
     }
   ],
   "replacementPatterns": [
