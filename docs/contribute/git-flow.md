@@ -1,7 +1,6 @@
 <!-- Space: Projects -->
 <!-- Parent: ActionConfluenceSync -->
 <!-- Title: Contributing GitFlow ActionConfluenceSync -->
-
 <!-- Label: ActionConfluenceSync -->
 <!-- Label: Project -->
 <!-- Label: Contributing -->
@@ -17,7 +16,7 @@ To contribute to action-confluence-sync project on [GitHub](https://github.com/h
 
 To follow the instructions in this guide and start contributing to action-confluence-sync project on Gitlab:
 
-1.  **Fork** the repo on GitLab
+1.  **Fork** the repo on GitHub
 2.  **Clone** the project to your own machine
 
 To synchronize with the main repository, add it to the remotes:

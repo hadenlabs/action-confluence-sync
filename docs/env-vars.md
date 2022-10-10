@@ -1,10 +1,9 @@
 <!-- Space: Projects -->
 <!-- Parent: ActionConfluenceSync -->
-<!-- Title: Env Vars ActionConfluenceSync -->
-
+<!-- Title: EnvVars ActionConfluenceSync -->
 <!-- Label: ActionConfluenceSync -->
 <!-- Label: Project -->
-<!-- Label: Env Vars -->
+<!-- Label: EnvVars -->
 <!-- Include: disclaimer.md -->
 <!-- Include: ac:toc -->
 

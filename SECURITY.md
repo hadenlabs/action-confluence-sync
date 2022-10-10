@@ -1,7 +1,6 @@
 <!-- Space: Projects -->
 <!-- Parent: ActionConfluenceSync -->
 <!-- Title: Security ActionConfluenceSync -->
-
 <!-- Label: ActionConfluenceSync -->
 <!-- Label: Security -->
 <!-- Include: docs/disclaimer.md -->
