@@ -1,7 +1,6 @@
 <!-- Space: Projects -->
 <!-- Parent: ActionConfluenceSync -->
 <!-- Title: Commands ActionConfluenceSync -->
-
 <!-- Label: ActionConfluenceSync -->
 <!-- Label: Project -->
 <!-- Label: Commands -->

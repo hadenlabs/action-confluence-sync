@@ -10,11 +10,6 @@ on:
       - develop
       - main
 
-  push:
-    branches:
-      - develop
-      - main
-
     tags:
       - '[0-9]+.[0-9]+.[0-9]+'
       # https://semver.org/ proper release tags, more or less
@@ -33,7 +28,7 @@ jobs:
     steps:
       - name: Check out a copy of the repo
         if: ${{ !env.ACT }}
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 2
 

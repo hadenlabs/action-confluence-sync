@@ -10,11 +10,6 @@ on:
       - develop
       - main
 
-  push:
-    branches:
-      - develop
-      - main
-
     tags:
       - '[0-9]+.[0-9]+.[0-9]+'
       # https://semver.org/ proper release tags, more or less
@@ -28,13 +23,13 @@ jobs:
     steps:
       - name: Check out a copy of the repo
         if: ${{ !env.ACT }}
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
       - name: Get changed files
         id: changed-files
-        uses: tj-actions/changed-files@v17.1
+        uses: tj-actions/changed-files@v26
         with:
           files: |
             *.md
@@ -42,7 +37,7 @@ jobs:
             *.tpl.md
 
       - name: Sync confluence
-        uses: ./
+        uses: hadenlabs/action-confluence-sync@0.1.0
         with:
           files: '${{ steps.changed-files.outputs.all_changed_files }}'
           confluence_url: ${{ secrets.CONFLUENCE_BASE_URL }}
